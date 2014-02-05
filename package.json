@@ -1,0 +1,32 @@
+{
+  "name": "cars-counter-github",
+  "version": "0.0.0",
+  "description": "A cars counter for GitHub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --invert --grep '\\[slow\\]'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bouzuya/cars-counter-github.git"
+  },
+  "keywords": [
+    "cars",
+    "cars-counter"
+  ],
+  "author": "bouzuya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bouzuya/cars-counter-github/issues"
+  },
+  "homepage": "https://github.com/bouzuya/cars-counter-github",
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "sinon": "~1.8.1",
+    "sinon-chai": "~2.5.0"
+  },
+  "dependencies": {
+    "github": "~0.1.13"
+  }
+}
