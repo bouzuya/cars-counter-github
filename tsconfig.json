@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "target": "es2015",
+    "noImplicitAny": true,
+    "outDir": ".tmp",
+    "rootDir": ".",
+    "sourceMap": false
+  },
+  "files": [
+    "./src/index.ts",
+    "./typings/tsd.d.ts"
+  ]
+}
