@@ -1,10 +1,35 @@
-cars-counter-github
-==============================================================================
+# cars-counter-github
 
-A [cars](https://github.com/bouzuya/cars) counter for GitHub.
+A [bouzuya/cars][] counter for GitHub.
 
-Configuration
-------------------------------------------------------------------------------
+## Installation
 
-    $ export GITHUB_USERNAME='bouzuya'
+```
+$ npm install --save bouzuya/cars-counter-github
+```
 
+## Configuration
+
+```
+$ export GITHUB_USERNAME='bouzuya'
+$ export GITHUB_ACCESS_TOKEN='...'
+```
+
+## License
+
+### >= 1.0.0
+
+[MIT](LICENSE)
+
+### < 0.x
+
+ISC
+
+## Author
+
+[bouzuya][user] &lt;[m@bouzuya.net][email]&gt; ([http://bouzuya.net][url])
+
+[user]: https://github.com/bouzuya
+[email]: mailto:m@bouzuya.net
+[url]: http://bouzuya.net
+[bouzuya/cars]: https://github.com/bouzuya/cars
