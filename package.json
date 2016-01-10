@@ -28,7 +28,7 @@
     "url": "git://github.com/bouzuya/cars-counter-github.git"
   },
   "scripts": {
-    "build": "tsd reinstall && tsc && babel --presets es2015 --out-dir lib/ .tmp/",
+    "build": "tsd reinstall && tsc && babel --presets es2015 --out-dir lib/ .tmp/src/",
     "clean": "rm -rf lib/ .tmp/",
     "start": "npm run clean && npm run build && node examples/index.js"
   }
