@@ -4,15 +4,15 @@ A [bouzuya/cars][] counter for GitHub.
 
 ## Installation
 
-```
-$ npm install --save bouzuya/cars-counter-github
+```bash
+npm install @bouzuya/cars-counter-github
 ```
 
 ## Configuration
 
-```
-$ export GITHUB_USERNAME='bouzuya'
-$ export GITHUB_ACCESS_TOKEN='...'
+```bash
+export GITHUB_USERNAME='bouzuya'
+export GITHUB_ACCESS_TOKEN='...'
 ```
 
 ## License
