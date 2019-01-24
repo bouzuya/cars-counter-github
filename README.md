@@ -15,6 +15,8 @@ export GITHUB_USERNAME='bouzuya'
 export GITHUB_ACCESS_TOKEN='...'
 ```
 
+See: [`_env`](_env).
+
 ## License
 
 ### >= 1.0.0

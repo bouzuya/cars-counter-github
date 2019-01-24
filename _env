@@ -1,0 +1,11 @@
+# Usage
+#
+# ```bash
+# cp _env .env
+# vi .env                # set your env
+# echo 'dotenv' > .envrc # direnv loads .env via .envrc
+# direnv allow
+# ```
+
+GITHUB_USERNAME=''
+GITHUB_ACCESS_TOKEN=''
