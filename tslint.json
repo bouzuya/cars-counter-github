@@ -7,7 +7,7 @@
   "rules": {
     "curly": [
       true,
-      "ignore-same-line"
+      "as-needed"
     ],
     "interface-name": [
       true,
