@@ -1,29 +1,31 @@
-import * as url from 'url';
 import fetch from 'node-fetch';
+import qs from 'querystring';
+import url from 'url';
 
-type Callback = (error: Error, counts?: any) => void;
-type GitHubResponse = {
-  followers: string;
-  following: string;
-  public_repos: string;
-  public_gists: string;
-};
+interface Counts { [k: string]: number; }
 
-export default function main(callback: Callback): void {
+interface GitHubResponse {
+  followers: number;
+  following: number;
+  public_gists: number;
+  public_repos: number;
+}
+
+export default function main(): Promise<Counts> {
   const username = process.env.GITHUB_USERNAME;
   const accessToken = process.env.GITHUB_ACCESS_TOKEN;
-  const urlObj = url.parse(`https://api.github.com/users/${username}`);
-  urlObj.query = { access_token: accessToken };
-  const urlString = url.format(urlObj);
-  fetch(urlString, {})
-  .then(response => response.json())
-  .then((json: GitHubResponse) => {
-    return {
-      'GitHub Followers': json.followers,
-      'GitHub Following': json.following,
-      'GitHub Public Repos': json.public_repos,
-      'GitHub Public Gists': json.public_gists
-    };
-  })
-  .then((counts: any) => callback(null, counts), callback);
+  const urlString = url.format({
+    ...url.parse(`https://api.github.com/users/${username}`),
+    query: qs.stringify({ access_token: accessToken })
+  });
+  return fetch(urlString, {})
+    .then((response) => response.json())
+    .then((json: GitHubResponse): Counts => {
+      return {
+        'GitHub Followers': json.followers,
+        'GitHub Following': json.following,
+        'GitHub Public Gists': json.public_gists,
+        'GitHub Public Repos': json.public_repos
+      };
+    });
 }
